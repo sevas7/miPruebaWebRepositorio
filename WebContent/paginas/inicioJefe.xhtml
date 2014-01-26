@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:richfaces="http://richfaces.ajax4jsf.org/rich"
+	xmlns:ajax="https://ajax4jsf.dev.java.net/ajax">
+<ui:composition template="/paginas/template.xhtml">
+	<ui:define name="title">Inicio</ui:define>
+	<ui:define name="west">
+		<h:form id="izquierda">
+			<br />
+			<center>
+				<rich:dropDownMenu value="Nuevo"
+					styleClass="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only "
+					style="width:120px;height:32px">
+					<rich:menuItem value="Comunicacion Interna"
+						style="font-size: 0.8em" />
+					<rich:menuItem value="Memorando" style="font-size: 0.8em" />
+					<rich:menuItem value="Circular" style="font-size: 0.8em" />
+					<rich:menuItem value="Mensaje" style="font-size: 0.8em" />
+				</rich:dropDownMenu>
+
+			</center>
+			<br />
+			<rich:separator style="width: 95%; height: 1px"
+				styleClass="ui-separator ui-state-default ui-corner-all" />
+			<h:panelGrid style="width:133px;font-size: 1.0em">
+				<rich:panelMenu
+					style="font-size: 1.0em; height : 70px; width : 130px;"
+					styleClass="ui-menu ui-widget ui-widget-content ui-corner-all ui-helper-clearfix">
+
+
+					<rich:menuItem value="Recibidos" />
+					<rich:menuItem value="Enviados" />
+
+					<rich:menuItem value="Registrados" />
+
+				</rich:panelMenu>
+			</h:panelGrid>
+			<rich:separator style="width: 95%; height: 1px"
+				styleClass="ui-separator ui-state-default ui-corner-all" />
+
+			<h:panelGrid style="width:133px;font-size: 1.0em">
+				<rich:panelMenu
+					style="font-size: 1.0em; height : 86px; width : 130px;"
+					styleClass="ui-menu ui-widget ui-widget-content ui-corner-all ui-helper-clearfix">
+
+
+					<rich:menuItem value="Elaborados" />
+					<rich:menuItem value="Construidos" />
+
+					<rich:menuItem value="Redactados" />
+					<rich:menuItem value="Listos para enviar" />
+
+				</rich:panelMenu>
+			</h:panelGrid>
+
+
+		</h:form>
+
+	</ui:define>
+	<ui:define name="centro">
+		<rich:panel
+			styleClass="ui-panel ui-widget ui-widget-content ui-corner-all"
+			style="min-width:400px;min-height:110px;" id="layout">
+			<h:form id="panelNorte">
+
+				<div style="float: left">
+					<br />
+					<h:panelGrid columns="2">
+						<rich:dropDownMenu value="Mas"
+							styleClass="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only "
+							style="width:120px;height:32px;font-size:1.8em">
+							<rich:menuItem value="Crear Expediente" style="font-size: 0.8em" />
+
+						</rich:dropDownMenu>
+						<a4j:commandButton id="actualizar" icon="ui-icon-arrowrefresh-1-e"
+							ajax="false" style="width:32px;height:32px"
+							styleClass="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only "></a4j:commandButton>
+
+
+
+
+					</h:panelGrid>
+
+
+
+
+
+				</div>
+
+				<div style="float: right">
+					<br />
+					<h:panelGrid columns="1">
+					<rich:dropDownMenu
+						styleClass="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only "
+						style="width:50px;height:15px;font-size:1.8em">
+						<rich:menuItem value="Ayuda" style="font-size: 0.4em" />
+						<rich:menuItem value="Cambiar Password" style="font-size: 0.4em" />
+						<rich:menuItem value="Cerrar Sesion" style="font-size: 0.4em" />
+					</rich:dropDownMenu>
+					
+					<rich:separator style="width: 0; height: 30px" />
+				
+					<rich:inplaceInput defaultLabel="Buscar Comunicacion"/>
+					</h:panelGrid>
+				</div>
+
+			</h:form>
+		</rich:panel>
+		<br />
+		<rich:panel
+			styleClass="ui-panel ui-widget ui-widget-content ui-corner-all"></rich:panel>
+	</ui:define>
+</ui:composition>
+
+
+</html>

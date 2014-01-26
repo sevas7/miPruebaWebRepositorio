@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:richfaces="http://richfaces.ajax4jsf.org/rich"
+	xmlns:ajax="https://ajax4jsf.dev.java.net/ajax">
+
+<ui:composition template="/paginas/template.xhtml">
+	<ui:define name="title">
+	    Restablecer la Contraseña 
+	</ui:define>
+	
+	<ui:define name="centro">
+		<div id="top" class="ui-layout-unit-content ui-widget-content" style="position: relative; height: 36px; visibility: visible;">
+		<h:form>
+		<a4j:commandButton value="Atras" id="atras"  styleClass="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only " icon="ui-icon-arrowthick-1-w" />
+		</h:form>
+		</div>
+		
+		<div id="down" class="ui-layout-unit ui-widget ui-widget-content ui-corner-all ui-layout-center ui-layout-pane ui-layout-pane-center" style="position: absolute; margin: 0px; left: 2px; right: 2px; top: 55px; bottom: 2px; height: 769px; width: 1007px; z-index: 1; display: block; visibility: visible;">
+		<br />
+		<br />
+		<br />
+			<center>
+			<rich:panel header="cambioContra" style="width:300px" styleClass="ui-panel ui-widget ui-widget-content ui-corner-all" >
+			<f:facet >Nueva Contraseña</f:facet>
+			<h:form>
+			<h:panelGrid columns="1" styleClass="ui-panel ui-widget ui-widget-content ui-corner-all">
+			<h:outputText value="Nombre de Usuario" />
+			<rich:inplaceInput id="userna" defaultLabel="Digite su nombre de usuario"></rich:inplaceInput>
+			<center>
+			<a4j:commandButton value="Enviar" id="enviarPass"  styleClass="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only " />
+			</center>
+			</h:panelGrid>
+			</h:form>
+			</rich:panel>
+		</center>
+		</div>
+	
+
+
+	</ui:define>
+
+</ui:composition>
+</html>

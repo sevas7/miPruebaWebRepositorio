@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:ajax="https://ajax4jsf.dev.java.net/ajax"
+	xmlns:richfaces="http://richfaces.ajax4jsf.org/rich"
+	xmlns:s="http://jboss.com/products/seam/taglib">
+
+<head>
+<style type="text/css" media="screen">
+@import url("/css/theme.css");
+</style>
+
+<!-- <link  type="text/css" rel="stylesheet"  -->
+<!-- 		  href="#{request.contextPath}/css/estilos.css"  > -->
+
+<!-- </link> -->
+</head>
+
+<body>
+	<div id="pagina"
+		style="width: auto; height: 970px; overflow: visible; position: relative;"
+		class="ui-layout-container">
+		<div id="encbezado"
+			class="ui-layout-unit ui-widget ui-widget-content ui-corner-all ui-layout-north ui-layout-pane ui-layout-pane-north"
+			style="position: absolute; margin: 0px; top: 0px; bottom: auto; left: 0px; right: 0px; width: auto; z-index: 1; height: 124px; display: block; visibility: visible;">
+			<div class="ui-layout-unit-content ui-widget-content"
+				style="position: relative; height: 121px; visibility: visible;">
+				<center>
+					<a href="http://www.uniquindio.edu.co"> <h:graphicImage
+							value="/resources/banner_uq.jpg" />
+					</a>
+				</center>
+			</div>
+
+		</div>
+		<div id="panel_izquierda"
+			class="ui-layout-unit ui-widget ui-widget-content ui-corner-all ui-layout-west ui-layout-pane ui-layout-pane-west"
+			style="position: absolute; margin: 0px; left: 0px; right: auto; top: 138px; bottom: 0px; height: 826px; z-index: 1; width: 144px; display: block; visibility: visible;">
+			<div class="ui-layout-unit-content ui-widget-content"
+				style="position: relative; height: 823px; visibility: visible;">
+
+				<ui:insert name="west">
+
+				</ui:insert>
+
+			</div>
+		</div>
+
+
+		<div id="panel_derecha"
+			class="ui-layout-unit ui-widget ui-widget-content ui-corner-all ui-layout-east ui-layout-pane ui-layout-pane-east"
+			style="position: absolute; margin: 0px; left: 1180px; right: 0px; top: 138px; bottom: 0px; height: 826px; z-index: 1; width: 144px; display: block; visibility: visible;">
+			<div class="ui-layout-unit-content ui-widget-content"
+				style="position: relative; height: 823px; visibility: visible;">
+				<ui:insert name="east">
+
+				</ui:insert>
+			</div>
+		</div>
+
+
+		<div id="panel_centro"
+			class="ui-layout-unit ui-widget ui-widget-content ui-corner-all ui-layout-center ui-layout-pane ui-layout-pane-center"
+			style="position: absolute; margin: 0px; left: 158px; right: 158px; top: 138px; bottom: 0px; height: 826px; width: 1011px; z-index: 1; display: block; visibility: visible;">
+
+			<div class="ui-layout-unit-content ui-widget-content"
+				style="position: relative; height: 823px; visibility: visible;">
+				<ui:insert name="centro">
+
+				</ui:insert>
+
+			</div>
+		</div>
+
+
+
+
+
+		<div id="j_idt9-resizer"
+			class="ui-layout-resizer ui-layout-resizer-north ui-layout-resizer-open ui-layout-resizer-north-open"
+			style="position: absolute; padding: 0px; margin: 0px; font-size: 1px; text-align: left; overflow: hidden; z-index: 2; top: 130px; cursor: default; width: 1333px; height: 6px; left: 0px;">
+		</div>
+		<div id="j_idt13-resizer"
+			class="ui-layout-resizer ui-layout-resizer-west ui-layout-resizer-open ui-layout-resizer-west-open"
+			style="position: absolute; padding: 0px; margin: 0px; font-size: 1px; text-align: left; overflow: hidden; z-index: 2; left: 150px; cursor: default; height: 834px; width: 6px; top: 138px;">
+		</div>
+		<div id="j_idt14-resizer"
+			class="ui-layout-resizer ui-layout-resizer-east ui-layout-resizer-open ui-layout-resizer-east-open"
+			style="position: absolute; padding: 0px; margin: 0px; font-size: 1px; text-align: left; overflow: hidden; z-index: 2; right: 150px; cursor: default; height: 834px; width: 6px; top: 138px;">
+		</div>
+
+	</div>
+
+
+
+
+</body>
+
+</html>
