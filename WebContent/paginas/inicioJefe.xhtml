@@ -7,7 +7,7 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:richfaces="http://richfaces.ajax4jsf.org/rich"
 	xmlns:ajax="https://ajax4jsf.dev.java.net/ajax">
-	
+
 <ui:composition template="/paginas/template.xhtml">
 	<ui:define name="title">Inicio</ui:define>
 	<ui:define name="west">
@@ -34,10 +34,13 @@
 					styleClass="ui-menu ui-widget ui-widget-content ui-corner-all ui-helper-clearfix">
 
 
-					<rich:menuItem value="Recibidos" styleClass="ui-menuitem ui-widget ui-corner-all"/>
-					<rich:menuItem value="Enviados" styleClass="ui-menuitem ui-widget ui-corner-all" />
+					<rich:menuItem value="Recibidos"
+						styleClass="ui-menuitem ui-widget ui-corner-all" />
+					<rich:menuItem value="Enviados"
+						styleClass="ui-menuitem ui-widget ui-corner-all" />
 
-					<rich:menuItem value="Registrados" styleClass="ui-menuitem ui-widget ui-corner-all" />
+					<rich:menuItem value="Registrados"
+						styleClass="ui-menuitem ui-widget ui-corner-all" />
 
 				</rich:panelMenu>
 			</h:panelGrid>
@@ -50,11 +53,15 @@
 					styleClass="ui-menu ui-widget ui-widget-content ui-corner-all ui-helper-clearfix">
 
 
-					<rich:menuItem value="Elaborados"  styleClass="ui-menuitem ui-widget ui-corner-all"/>
-					<rich:menuItem value="Construidos" styleClass="ui-menuitem ui-widget ui-corner-all"/>
+					<rich:menuItem value="Elaborados"
+						styleClass="ui-menuitem ui-widget ui-corner-all" />
+					<rich:menuItem value="Construidos"
+						styleClass="ui-menuitem ui-widget ui-corner-all" />
 
-					<rich:menuItem value="Redactados" styleClass="ui-menuitem ui-widget ui-corner-all" />
-					<rich:menuItem value="Listos para enviar" styleClass="ui-menuitem ui-widget ui-corner-all"/>
+					<rich:menuItem value="Redactados"
+						styleClass="ui-menuitem ui-widget ui-corner-all" />
+					<rich:menuItem value="Listos para enviar"
+						styleClass="ui-menuitem ui-widget ui-corner-all" />
 
 				</rich:panelMenu>
 			</h:panelGrid>
@@ -64,6 +71,7 @@
 
 	</ui:define>
 	<ui:define name="centro">
+	<ui:insert name="panelNorte">
 		<rich:panel
 			styleClass="ui-panel ui-widget ui-widget-content ui-corner-all"
 			style="min-width:400px;min-height:110px;" id="layout">
@@ -72,6 +80,13 @@
 				<div style="float: left">
 					<br />
 					<h:panelGrid columns="2">
+
+						<rich:inplaceInput defaultLabel="Buscar Comunicacion"
+							styleClass="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all "
+							style="width:550px;height:29px" />
+						<a4j:commandButton id="actualizar" icon="ui-icon-arrowrefresh-1-e"
+							ajax="false" style="width:32px;height:32px"
+							styleClass="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only "></a4j:commandButton>
 						<rich:dropDownMenu value="Mas"
 							styleClass="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only "
 							style="width:120px;height:32px;font-size:1.8em">
@@ -96,6 +111,7 @@
 				<div style="float: right">
 					<br />
 					<h:panelGrid columns="1">
+
 						<rich:dropDownMenu
 							styleClass="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only "
 							style="width:50px;height:15px;font-size:1.8em">
@@ -106,56 +122,73 @@
 
 						<rich:separator style="width: 0; height: 5px" />
 
-						<rich:inplaceInput defaultLabel="Buscar Comunicacion" />
+
+
 					</h:panelGrid>
 				</div>
 
 			</h:form>
 		</rich:panel>
+		</ui:insert>
 		<rich:separator style="width: 0; height: 5px" />
+		<ui:insert name="panelSur">
 		<rich:panel
 			styleClass="ui-panel ui-widget ui-widget-content ui-corner-all"
 			style="min-width:400px;min-height:700px;" id="layout1">
 			<h:form>
-				<rich:dataTable var="mensajes" iterationStatusVar="it" rows="15" styleClass="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" rowClasses="odd-row, even-row"   style="width: 989px; height: 100px">
-					
-					<rich:column styleClass="ui-datatable-data ui-widget-content "  >
-						<f:facet name="header"  >
-							<h:outputText value="Leido" styleClass="ui-state-default ui-draggable ui-droppable" />
-						</f:facet>
-					</rich:column>
+				<rich:dataTable var="mensajes" iterationStatusVar="it" rows="15"
+					styleClass="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+					rowClasses="odd-row, even-row" style="width: 989px; height: 100px">
 
-					<rich:column filterValue="" filterExpression="" styleClass="ui-datatable-data ui-widget-content">
-						<f:facet name="header" style="width: 307px; height: 57px;">
+
+
+
+
+					<rich:columnGroup>
+
+
+						<rich:column colspan="5" >
+							<center>
+								<h:outputText value="Recibidos"
+									 />
+							</center>
+						</rich:column>
+
+						<rich:column breakBefore="true"
+							styleClass="ui-state-default ui-draggable ui-droppable">
+							<h:outputText value="Leido" />
+						</rich:column>
+						<rich:column filterValue="" filterExpression=""
+							styleClass="ui-state-default ui-draggable ui-droppable">
 							<h:panelGroup>
-								<h:outputText value="Remitente:" styleClass="ui-state-default ui-draggable ui-droppable" />
+								<h:outputText value="Remitente:" />
 								<h:inputText value="">
 								aqui ajax
 								</h:inputText>
 							</h:panelGroup>
-						</f:facet>
-						<h:outputText value="" />
-					</rich:column>
-					<rich:column styleClass="ui-datatable-data ui-widget-content" >
-						<f:facet name="header" style="width: 157px; height: 57px;">
-							<h:outputText value="Asunto" styleClass="ui-state-default ui-draggable ui-droppable"/>
-						</f:facet>
-					</rich:column>
-					<rich:column styleClass="ui-datatable-data ui-widget-content">
-					<f:facet name="header">
-							<h:outputText value="Comunicacion" styleClass="ui-state-default ui-draggable ui-droppable"/>
-						</f:facet>
-					</rich:column>
-					<rich:column styleClass="ui-datatable-data ui-widget-content">
-					<f:facet name="header">
-							<h:outputText value="Fecha" styleClass="ui-state-default ui-draggable ui-droppable"/>
-						</f:facet>
-					</rich:column>
+						</rich:column>
+						<rich:column
+							styleClass="ui-state-default ui-draggable ui-droppable">
+							<h:outputText value="Asunto" />
+						</rich:column>
+						<rich:column
+							styleClass="ui-state-default ui-draggable ui-droppable">
+							<h:outputText value="Comunicacion" />
+						</rich:column>
+						<rich:column
+							styleClass="ui-state-default ui-draggable ui-droppable">
+							<h:outputText value="Fecha" />
+						</rich:column>
+
+
+
+					</rich:columnGroup>
 				</rich:dataTable>
 
 			</h:form>
 
 		</rich:panel>
+		</ui:insert>
 	</ui:define>
 </ui:composition>
 

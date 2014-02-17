@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:richfaces="http://richfaces.ajax4jsf.org/rich"
+	xmlns:ajax="https://ajax4jsf.dev.java.net/ajax">
+
+<ui:composition template="/paginas/inicioJefe.xhtml">
+	
+	<ui:define name="panelSur">
+	
+		<rich:separator style="width: 0; height: 5px" />
+		<rich:panel
+			styleClass="ui-panel ui-widget ui-widget-content ui-corner-all"
+			style="min-width:400px;min-height:700px;" id="layout1">
+			<h:form>
+				<rich:dataTable var="mensajes" iterationStatusVar="it" rows="15"
+					styleClass="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+					rowClasses="odd-row, even-row" style="width: 989px; height: 100px">
+
+
+
+
+
+					<rich:columnGroup>
+
+
+						<rich:column colspan="5" >
+							<center>
+								<h:outputText value="En Construccion"
+									 />
+							</center>
+						</rich:column>
+
+						<rich:column breakBefore="true"
+							styleClass="ui-state-default ui-draggable ui-droppable">
+							<h:outputText value="Leido" />
+						</rich:column>
+						<rich:column filterValue="" filterExpression=""
+							styleClass="ui-state-default ui-draggable ui-droppable">
+							<h:panelGroup>
+								<h:outputText value="Remitente:" />
+								<h:inputText value="">
+								aqui ajax
+								</h:inputText>
+							</h:panelGroup>
+						</rich:column>
+						<rich:column
+							styleClass="ui-state-default ui-draggable ui-droppable">
+							<h:outputText value="Asunto" />
+						</rich:column>
+						<rich:column
+							styleClass="ui-state-default ui-draggable ui-droppable">
+							<h:outputText value="Comunicacion" />
+						</rich:column>
+						<rich:column
+							styleClass="ui-state-default ui-draggable ui-droppable">
+							<h:outputText value="Fecha" />
+						</rich:column>
+
+
+
+					</rich:columnGroup>
+				</rich:dataTable>
+
+			</h:form>
+
+		</rich:panel>
+	</ui:define>
+</ui:composition>
+
+
+</html>
